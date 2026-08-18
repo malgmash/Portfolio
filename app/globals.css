@@ -7,9 +7,9 @@
   --raw-border: #2a2e35;
   --raw-text: #f2f1ed;
   --raw-text-muted: #a9afb8;
-  --raw-accent: #f2a93b;
-  --raw-accent-strong: #ffc169;
-  --raw-on-accent: #14110a;
+  --raw-accent: #4a86ff;
+  --raw-accent-strong: #7fa8ff;
+  --raw-on-accent: #081530;
 }
 
 :root[data-theme="light"] {
@@ -19,8 +19,8 @@
   --raw-border: #e1ded5;
   --raw-text: #17181a;
   --raw-text-muted: #565a61;
-  --raw-accent: #9a5b12;
-  --raw-accent-strong: #7c480b;
+  --raw-accent: #1e4fd6;
+  --raw-accent-strong: #16337f;
   --raw-on-accent: #ffffff;
 }
 
