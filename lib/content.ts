@@ -10,6 +10,7 @@ export type Profile = {
   name: string;
   monogram: string;
   eyebrow: string;
+  taglines: string[];
   positioning: string;
   location: string;
   email: string;
@@ -82,6 +83,7 @@ export const profile: Profile = {
   name: "Malama Masheke",
   monogram: "MM",
   eyebrow: "Software Engineer",
+  taglines: ["I build to solve problems", "I build data-driven products", "I build for fun"],
   positioning: "Full-stack development, database security, and applied AI",
   location: "Salisbury, North Carolina, USA",
   email: "gabrielmasheke@gmail.com",

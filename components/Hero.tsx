@@ -1,5 +1,6 @@
 import { profile } from "@/lib/content";
 import ProfilePhoto from "./ProfilePhoto";
+import TypingText from "./TypingText";
 import { GitHubIcon, LinkedInIcon, MailIcon, ChevronDownIcon } from "./icons";
 
 export default function Hero() {
@@ -11,9 +12,10 @@ export default function Hero() {
     >
       <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 px-6 py-16 sm:grid-cols-[1fr_auto] sm:py-24">
         <div>
-          <p className="font-display text-sm font-medium uppercase tracking-[0.25em] text-accent">
-            {profile.eyebrow}
-          </p>
+          <TypingText
+            phrases={profile.taglines}
+            className="min-h-[1.5rem] font-display text-sm font-medium text-accent tracking-[0.1em] sm:text-base"
+          />
           <h1 className="mt-4 text-5xl font-semibold tracking-tight text-text sm:text-6xl md:text-7xl">
             {profile.name}
           </h1>
