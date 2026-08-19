@@ -14,7 +14,7 @@ export default function Hero() {
         <div>
           <TypingText
             phrases={profile.taglines}
-            className="min-h-[1.5rem] font-display text-sm font-medium text-accent tracking-[0.1em] sm:text-base"
+            className="min-h-[1.75rem] font-display text-xl font-medium text-accent sm:text-2xl"
           />
           <h1 className="mt-4 text-5xl font-semibold tracking-tight text-text sm:text-6xl md:text-7xl">
             {profile.name}

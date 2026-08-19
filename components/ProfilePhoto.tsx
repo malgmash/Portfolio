@@ -28,6 +28,7 @@ export default function ProfilePhoto() {
           height={SIZE}
           priority
           className="h-full w-full object-cover"
+          style={{ objectPosition: "50% 20%" }}
         />
       </div>
     );
