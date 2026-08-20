@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Section from "./Section";
 import { experience } from "@/lib/content";
 
@@ -37,6 +38,17 @@ export default function Experience() {
                   </li>
                 ))}
               </ul>
+            ) : null}
+            {entry.image ? (
+              <div className="mt-4 max-w-xs overflow-hidden rounded-xl border border-border">
+                <Image
+                  src={entry.image.src}
+                  alt={entry.image.alt}
+                  width={entry.image.width}
+                  height={entry.image.height}
+                  className="h-auto w-full"
+                />
+              </div>
             ) : null}
           </li>
         ))}

@@ -48,12 +48,20 @@ export type Project = {
   liveUrl?: string;
 };
 
+export type ExperienceImage = {
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+};
+
 export type ExperienceEntry = {
   title: string;
   org: string;
   dateLine: string;
   bullets: string[];
   stack?: string[];
+  image?: ExperienceImage;
 };
 
 export type SkillGroup = {
@@ -183,23 +191,35 @@ export const experience: ExperienceEntry[] = [
       "Implemented signal processing and numerical computing exercises in MATLAB",
     ],
     stack: ["MATLAB", "signal processing", "RF spectrum fundamentals"],
+    image: {
+      src: "/spectrum-sizzle.jpeg",
+      width: 1538,
+      height: 2048,
+      alt: "Working at a signal-analysis workstation during the NSF-Funded Spectrum Sizzle Workshop",
+    },
   },
   {
     title: "Cato University 2026, Summer Term I",
     org: "Cato Institute",
-    dateLine: "Summer 2026",
+    dateLine: "August 2026",
     bullets: [
       "Selected for the Cato Institute's residential student program on political economy and public policy",
       "Focused sessions on technology and finance policy, and on public speaking and argumentation",
     ],
+    image: {
+      src: "/cato-university.jpeg",
+      width: 4284,
+      height: 5712,
+      alt: "Wearing a Cato University conference badge at Cato University 2026",
+    },
   },
   {
-    title: "Entertainment Prefect",
-    org: "Livingstone College",
+    title: "Adobe Student Ambassador",
+    org: "Adobe",
     dateLine: "",
     bullets: [
-      "Planned and executed large-scale campus events end to end, from concept through logistics and delivery",
-      "Coordinated across student organizations and administration to run programming at scale",
+      "Selected to represent Adobe on campus at Livingstone College",
+      "Ran peer education sessions and live technical demonstrations for the student community",
     ],
   },
 ];
@@ -257,8 +277,7 @@ export const recognitionStats: RecognitionStat[] = [
 ];
 
 // Awards and Recognition, plus the ColorStack line from Leadership and Community
-// (Entertainment Prefect and Adobe Student Ambassador already appear under
-// Experience and Awards respectively, so they aren't duplicated here).
+// (Adobe Student Ambassador already appears under Experience, so it isn't duplicated here).
 export const awards: ListItem[] = [
   { title: "Presidential Scholar", detail: "Livingstone College, with a 4.0 GPA" },
   { title: "Top 10% globally", detail: "HackerRank Orchestrate hackathon, May 2026" },
@@ -266,7 +285,6 @@ export const awards: ListItem[] = [
     title: "NSF-funded Spectrum Sizzle Workshop selectee",
     detail: "One of 40 undergraduates nationwide, Baylor University with Google and Keysight Technologies, June 2026",
   },
-  { title: "Adobe Student Ambassador", detail: "Represent the Adobe community at Livingstone College" },
   { title: "Odessa J. Robinson Scholarship", detail: "Promise City Church" },
   { title: "Cato University 2026 selectee", detail: "Cato Institute" },
   { title: "ColorStack member", detail: "The national community for Black and Latinx students in computing" },
