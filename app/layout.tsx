@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider, themeInitScript } from "@/lib/theme";
 import { profile } from "@/lib/content";
+import CursorSpotlight from "@/components/CursorSpotlight";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -32,7 +33,10 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          {children}
+          <CursorSpotlight />
+        </ThemeProvider>
       </body>
     </html>
   );

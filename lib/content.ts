@@ -92,7 +92,7 @@ export const profile: Profile = {
     "I work in teams",
     "I am hardworking, goal oriented and resilient",
   ],
-  positioning: "Full-stack development, database security, and applied AI",
+  positioning: "Software Development, Product Management, and Data Analysis.",
   location: "Salisbury, North Carolina, USA",
   phone: "(+1) 704-223-7645",
   email: "gabrielmasheke@gmail.com",
@@ -102,9 +102,9 @@ export const profile: Profile = {
 
 export const about: AboutContent = {
   whoIAm:
-    "Undergraduate at Livingstone College, Presidential Scholar with a 4.0 GPA. I work at the intersection of backend architecture and security, and I care most about systems where correctness actually matters: authorization, data integrity, and getting the hard edge cases right rather than the happy path.",
+    "Undergraduate at Livingstone College, Presidential Scholar with a 4.0 GPA. I use my hardwork, determination and resilience to analyze, design, lead and build projects. I solve problems and have fun while doing it. From front-end to back-end to interpreting data, I do it all and do not limit myself.",
   whatIBuild:
-    "Full-stack applications with security designed in from the schema up, not bolted on afterward. Recent work spans a workspace-scoped voting platform enforcing row-level authorization across twelve tables and an AI support triage agent with grounding checks and human escalation routing. I also work as a directed operator of AI coding agents, scoping tasks, reviewing diffs, and owning the architecture decisions myself.",
+    "From full-stack applications to AI agents, I design security into the schema rather than adding it later, and I build for the cases where correctness matters: who can access what, whether the data holds up, and what happens when the system is asked something it can't answer. I also work alongside AI coding agents, scoping the tasks, reviewing the output, and owning the design decisions myself.",
 };
 
 export const education: EducationEntry[] = [
