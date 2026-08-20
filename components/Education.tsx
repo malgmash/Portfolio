@@ -1,5 +1,6 @@
 import Section from "./Section";
 import { education, continuingEducation } from "@/lib/content";
+import { FileIcon } from "./icons";
 
 export default function Education() {
   return (
@@ -24,6 +25,29 @@ export default function Education() {
                 </li>
               ))}
             </ul>
+
+            {entry.institution === "Livingstone College" ? (
+              <div className="mt-5 flex flex-wrap gap-3">
+                <a
+                  href="/final-grade-report.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-md border border-border bg-surface-2 px-4 py-2 text-sm font-semibold text-text transition-colors hover:border-accent hover:text-accent"
+                >
+                  <FileIcon className="h-4 w-4" />
+                  Final Grade Report
+                </a>
+                <a
+                  href="/current-coursework.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-md border border-border bg-surface-2 px-4 py-2 text-sm font-semibold text-text transition-colors hover:border-accent hover:text-accent"
+                >
+                  <FileIcon className="h-4 w-4" />
+                  Current Coursework
+                </a>
+              </div>
+            ) : null}
           </div>
         ))}
 
