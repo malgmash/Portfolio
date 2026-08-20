@@ -42,7 +42,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             className="inline-flex items-center gap-2 text-sm font-semibold text-text underline decoration-border underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
           >
             <ExternalLinkIcon className="h-4 w-4" />
-            Live demo
+            Link
           </a>
         ) : null}
       </div>
