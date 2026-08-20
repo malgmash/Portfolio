@@ -96,6 +96,31 @@ export function ExternalLinkIcon({ className }: IconProps) {
   );
 }
 
+export function PhoneIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" className={className} aria-hidden="true">
+      <path
+        d="M4.5 4.5h3.4l1.4 4.2-2.1 1.7a12.5 12.5 0 0 0 6.4 6.4l1.7-2.1 4.2 1.4v3.4a1.5 1.5 0 0 1-1.6 1.5C10.6 20.4 3.6 13.4 3 6.1a1.5 1.5 0 0 1 1.5-1.6Z"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function MapPinIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" className={className} aria-hidden="true">
+      <path
+        d="M12 21.5S19 15.4 19 10a7 7 0 1 0-14 0c0 5.4 7 11.5 7 11.5Z"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx="12" cy="10" r="2.5" />
+    </svg>
+  );
+}
+
 export function FileIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" className={className} aria-hidden="true">

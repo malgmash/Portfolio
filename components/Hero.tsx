@@ -1,9 +1,21 @@
+import fs from "node:fs";
+import path from "node:path";
 import { profile } from "@/lib/content";
 import ProfilePhoto from "./ProfilePhoto";
 import TypingText from "./TypingText";
-import { GitHubIcon, LinkedInIcon, MailIcon, ChevronDownIcon } from "./icons";
+import ContactModal from "./ContactModal";
+import { GitHubIcon, LinkedInIcon, FileIcon, ExternalLinkIcon, ChevronDownIcon } from "./icons";
+
+const secondaryButton =
+  "inline-flex items-center gap-2 rounded-md border border-border bg-surface px-5 py-2.5 text-sm font-semibold text-text transition-colors hover:border-accent hover:text-accent";
+
+function resumeExists(): boolean {
+  return fs.existsSync(path.join(process.cwd(), "public", "resume.pdf"));
+}
 
 export default function Hero() {
+  const hasResume = resumeExists();
+
   return (
     <section
       id="top"
@@ -31,22 +43,23 @@ export default function Hero() {
               <GitHubIcon className="h-4 w-4" />
               GitHub
             </a>
-            <a
-              href={profile.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-2.5 text-sm font-semibold text-text transition-colors hover:border-accent hover:text-accent"
-            >
+            <a href={profile.linkedin} target="_blank" rel="noreferrer" className={secondaryButton}>
               <LinkedInIcon className="h-4 w-4" />
               LinkedIn
             </a>
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-2.5 text-sm font-semibold text-text transition-colors hover:border-accent hover:text-accent"
-            >
-              <MailIcon className="h-4 w-4" />
-              Contact
-            </a>
+            <ContactModal />
+            {hasResume ? (
+              <>
+                <a href="/resume.pdf" target="_blank" rel="noreferrer" className={secondaryButton}>
+                  <ExternalLinkIcon className="h-4 w-4" />
+                  View Resume
+                </a>
+                <a href="/resume.pdf" download={`${profile.name.replace(/\s+/g, "_")}_Resume.pdf`} className={secondaryButton}>
+                  <FileIcon className="h-4 w-4" />
+                  Download Resume
+                </a>
+              </>
+            ) : null}
           </div>
         </div>
 

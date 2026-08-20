@@ -13,6 +13,7 @@ export type Profile = {
   taglines: string[];
   positioning: string;
   location: string;
+  phone: string;
   email: string;
   github: string;
   linkedin: string;
@@ -93,6 +94,7 @@ export const profile: Profile = {
   ],
   positioning: "Full-stack development, database security, and applied AI",
   location: "Salisbury, North Carolina, USA",
+  phone: "(+1) 704-223-7645",
   email: "gabrielmasheke@gmail.com",
   github: "https://github.com/malgmash",
   linkedin: "https://www.linkedin.com/in/malama-masheke",
