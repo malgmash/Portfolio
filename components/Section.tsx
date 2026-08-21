@@ -10,9 +10,9 @@ type SectionProps = {
 export default function Section({ id, eyebrow, title, headingLevel = "h2", children, className }: SectionProps) {
   const Heading = headingLevel;
   return (
-    <section id={id} className={`scroll-mt-24 py-20 sm:py-28 ${className ?? ""}`} aria-labelledby={`${id}-heading`}>
+    <section id={id} className={`scroll-mt-24 py-14 sm:py-20 ${className ?? ""}`} aria-labelledby={`${id}-heading`}>
       <div className="mx-auto max-w-5xl px-6">
-        <div className="mb-10 sm:mb-14">
+        <div className="mb-8 sm:mb-10">
           {eyebrow ? (
             <p className="mb-2 font-display text-sm font-medium uppercase tracking-[0.2em] text-accent">{eyebrow}</p>
           ) : null}

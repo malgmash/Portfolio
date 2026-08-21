@@ -5,7 +5,7 @@ import { experience } from "@/lib/content";
 export default function Experience() {
   return (
     <Section id="experience" eyebrow="Experience" title="Experience and Programs">
-      <ol className="relative space-y-10 border-l border-border pl-8">
+      <ol className="relative space-y-8 border-l border-border pl-8">
         {experience.map((entry) => (
           <li key={entry.title} className="relative">
             <span

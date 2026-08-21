@@ -118,10 +118,13 @@ export default function CursorSpotlight() {
         .join("");
     };
 
-    let scheduled: ReturnType<typeof setTimeout> | null = null;
+    let rafId: number | null = null;
     const schedule = () => {
-      if (scheduled) clearTimeout(scheduled);
-      scheduled = setTimeout(recompute, RECOMPUTE_DEBOUNCE_MS);
+      if (rafId !== null) return;
+      rafId = requestAnimationFrame(() => {
+        rafId = null;
+        recompute();
+      });
     };
 
     recompute();
@@ -139,7 +142,7 @@ export default function CursorSpotlight() {
       window.removeEventListener("scroll", schedule, { capture: true });
       mutationObserver.disconnect();
       resizeObserver.disconnect();
-      if (scheduled) clearTimeout(scheduled);
+      if (rafId !== null) cancelAnimationFrame(rafId);
     };
   }, [enabled]);
 
