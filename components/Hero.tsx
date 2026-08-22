@@ -19,10 +19,11 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-[80vh] scroll-mt-24 items-center border-b border-border pt-16"
+      className="relative flex min-h-[80vh] scroll-mt-24 flex-col border-b border-border pt-16 pb-8"
       aria-label="Introduction"
     >
-      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 px-6 py-12 sm:grid-cols-[1fr_auto] sm:py-16">
+      <div className="mx-auto flex w-full max-w-6xl flex-1 items-center px-6">
+        <div className="grid w-full grid-cols-1 items-center gap-12 py-12 sm:grid-cols-[1fr_auto] sm:py-16">
         <div>
           <TypingText
             phrases={profile.taglines}
