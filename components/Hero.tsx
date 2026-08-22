@@ -24,54 +24,59 @@ export default function Hero() {
     >
       <div className="mx-auto flex w-full max-w-6xl flex-1 items-center px-6">
         <div className="grid w-full grid-cols-1 items-center gap-12 py-12 sm:grid-cols-[1fr_auto] sm:py-16">
-        <div>
-          <TypingText
-            phrases={profile.taglines}
-            className="min-h-[1.75rem] font-display text-xl font-medium text-accent sm:text-2xl"
-          />
-          <h1 className="mt-4 text-5xl font-semibold tracking-tight text-text sm:text-6xl md:text-7xl">
-            {profile.name}
-          </h1>
-          <p className="mt-6 max-w-xl text-lg text-text-muted sm:text-xl">{profile.positioning}</p>
+          <div>
+            <TypingText
+              phrases={profile.taglines}
+              className="min-h-[1.75rem] font-display text-xl font-medium text-accent sm:text-2xl"
+            />
+            <h1 className="mt-4 text-5xl font-semibold tracking-tight text-text sm:text-6xl md:text-7xl">
+              {profile.name}
+            </h1>
+            <p className="mt-6 max-w-xl text-lg text-text-muted sm:text-xl">{profile.positioning}</p>
 
-          <div className="mt-9 flex flex-wrap items-center gap-4">
-            <a
-              href={profile.github}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-on-accent transition-colors hover:bg-accent-strong"
-            >
-              <GitHubIcon className="h-4 w-4" />
-              GitHub
-            </a>
-            <a href={profile.linkedin} target="_blank" rel="noreferrer" className={secondaryButton}>
-              <LinkedInIcon className="h-4 w-4" />
-              LinkedIn
-            </a>
-            <ContactModal />
-            {hasResume ? (
-              <>
-                <a href="/resume.pdf" target="_blank" rel="noreferrer" className={secondaryButton}>
-                  <ExternalLinkIcon className="h-4 w-4" />
-                  View Resume
-                </a>
-                <a href="/resume.pdf" download={`${profile.name.replace(/\s+/g, "_")}_Resume.pdf`} className={secondaryButton}>
-                  <FileIcon className="h-4 w-4" />
-                  Download Resume
-                </a>
-              </>
-            ) : null}
+            <div className="mt-9 flex flex-wrap items-center gap-4">
+              <a
+                href={profile.github}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-on-accent transition-colors hover:bg-accent-strong"
+              >
+                <GitHubIcon className="h-4 w-4" />
+                GitHub
+              </a>
+              <a href={profile.linkedin} target="_blank" rel="noreferrer" className={secondaryButton}>
+                <LinkedInIcon className="h-4 w-4" />
+                LinkedIn
+              </a>
+              <ContactModal />
+              {hasResume ? (
+                <>
+                  <a href="/resume.pdf" target="_blank" rel="noreferrer" className={secondaryButton}>
+                    <ExternalLinkIcon className="h-4 w-4" />
+                    View Resume
+                  </a>
+                  <a
+                    href="/resume.pdf"
+                    download={`${profile.name.replace(/\s+/g, "_")}_Resume.pdf`}
+                    className={secondaryButton}
+                  >
+                    <FileIcon className="h-4 w-4" />
+                    Download Resume
+                  </a>
+                </>
+              ) : null}
+            </div>
           </div>
-        </div>
 
-        <div className="justify-self-start sm:justify-self-end">
-          <ProfilePhoto />
+          <div className="justify-self-start sm:justify-self-end">
+            <ProfilePhoto />
+          </div>
         </div>
       </div>
 
       <a
         href="#about"
-        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-1 text-text-muted transition-colors hover:text-text sm:flex"
+        className="mx-auto hidden flex-col items-center gap-1 pt-6 text-text-muted transition-colors hover:text-text sm:flex"
         aria-label="Scroll to About section"
       >
         <span className="text-xs uppercase tracking-widest">Scroll</span>
