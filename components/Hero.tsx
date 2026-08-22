@@ -75,9 +75,9 @@ export default function Hero() {
       </div>
 
       <a
-        href="#about"
+        href="#projects"
         className="mx-auto hidden flex-col items-center gap-1 pt-6 text-text-muted transition-colors hover:text-text sm:flex"
-        aria-label="Scroll to About section"
+        aria-label="Scroll to Projects section"
       >
         <span className="text-xs uppercase tracking-widest">Scroll</span>
         <ChevronDownIcon className="h-5 w-5 animate-bounce" />

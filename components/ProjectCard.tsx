@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Project } from "@/lib/content";
 import { GitHubIcon, ExternalLinkIcon, ChevronDownIcon } from "./icons";
 
@@ -46,6 +47,18 @@ export default function ProjectCard({ project }: { project: Project }) {
           </a>
         ) : null}
       </div>
+
+      {project.image ? (
+        <div className="mt-6 overflow-hidden rounded-xl border border-border">
+          <Image
+            src={project.image.src}
+            alt={project.image.alt}
+            width={project.image.width}
+            height={project.image.height}
+            className="h-auto w-full"
+          />
+        </div>
+      ) : null}
 
       {project.details.length > 0 ? (
         <details className="group mt-6 border-t border-border pt-5">

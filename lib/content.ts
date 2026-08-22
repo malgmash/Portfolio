@@ -37,6 +37,13 @@ export type ContinuingEducationEntry = {
   provider: string;
 };
 
+export type ImageAsset = {
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+};
+
 export type Project = {
   slug: string;
   title: string;
@@ -46,13 +53,7 @@ export type Project = {
   stack: string[];
   repoUrl?: string;
   liveUrl?: string;
-};
-
-export type ExperienceImage = {
-  src: string;
-  width: number;
-  height: number;
-  alt: string;
+  image?: ImageAsset;
 };
 
 export type ExperienceEntry = {
@@ -61,7 +62,7 @@ export type ExperienceEntry = {
   dateLine: string;
   bullets: string[];
   stack?: string[];
-  image?: ExperienceImage;
+  image?: ImageAsset;
 };
 
 export type SkillGroup = {
@@ -80,9 +81,9 @@ export type ListItem = {
 };
 
 export const navLinks: NavLink[] = [
+  { label: "Projects", href: "#projects" },
   { label: "About", href: "#about" },
   { label: "Education", href: "#education" },
-  { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
   { label: "Recognition", href: "#recognition" },
   { label: "Contact", href: "#contact" },
@@ -160,6 +161,12 @@ export const projects: Project[] = [
     ],
     repoUrl: "https://github.com/malgmash/Demos",
     liveUrl: "https://demos-rust-eight.vercel.app/",
+    image: {
+      src: "/demos-screenshot.png",
+      width: 1919,
+      height: 942,
+      alt: "Dēmos workspace dashboard showing sessions, total votes cast, and turnout",
+    },
   },
   {
     slug: "tri-ask-me",
@@ -177,6 +184,12 @@ export const projects: Project[] = [
     ],
     stack: ["Python", "Amazon Bedrock", "TF-IDF retrieval", "RAG", "prompt engineering"],
     repoUrl: "https://github.com/malgmash/Tri-Ask-Me",
+    image: {
+      src: "/tri-ask-me-diagram.png",
+      width: 1004,
+      height: 507,
+      alt: "Tri-Ask-Me pipeline diagram: tickets flow through an orchestrator to a retriever, classifier, and responder, ending in a reply or an escalation",
+    },
   },
 ];
 
