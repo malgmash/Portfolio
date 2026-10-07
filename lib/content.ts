@@ -202,9 +202,9 @@ export const projects: Project[] = [
     liveUrl: "https://audit-x-three.vercel.app",
     image: {
       src: "/auditx-screenshot.png",
-      width: 1891,
-      height: 864,
-      alt: "AuditX landing page with the headline \"Find what doesn't add up\" beside a demo card flagging a possible duplicate receipt of $742.00 submitted 63 days apart",
+      width: 1888,
+      height: 859,
+      alt: "AuditX admin Employees view listing 49 people with department, risk score, open cases, and amount at risk, sorted by amount at risk",
     },
   },
   {
